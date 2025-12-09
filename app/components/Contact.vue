@@ -8,7 +8,7 @@
         <!-- Logo + Tagline -->
         <div class="space-y-4 flex flex-col items-center md:items-start">
           <img
-            src="/assets/img/logo.jpeg"
+            src="/img/logo.jpeg"
             alt="Company Logo"
             class="w-36 opacity-90"
           >

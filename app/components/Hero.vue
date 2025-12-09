@@ -45,8 +45,9 @@
 
         <!-- Illustration -->
         <img
-          src="/assets/img/finance-ill.svg"
+          src="/img/finance-ill.svg"
           class="relative w-[440px] drop-shadow-xl animate-[float_7s_ease-in-out_infinite]"
+          alt="Financial illustration showing investment and trading concept"
         >
       </div>
     </div>

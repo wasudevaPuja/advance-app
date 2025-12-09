@@ -46,8 +46,9 @@
                    transition-all duration-300 hover:shadow-[0_35px_65px_rgba(0,0,0,0.1)]"
           >
             <img
-              src="/assets/img/about.svg"
+              src="/img/about.svg"
               class="w-[380px]"
+              alt="About ys illustration"
             >
           </div>
         </div>
