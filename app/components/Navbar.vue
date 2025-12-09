@@ -1,0 +1,114 @@
+<script setup>
+import { ref } from 'vue'
+
+const isOpen = ref(false)
+
+const handleScroll = (e, target) => {
+  e.preventDefault()
+  isOpen.value = false
+  document.querySelector(target)?.scrollIntoView({
+    behavior: 'smooth'
+  })
+}
+</script>
+
+<template>
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm"
+  >
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- LOGO -->
+      <div class="text-2xl font-bold text-blue-700">
+        ADVANCE TRADING
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <nav class="hidden md:flex space-x-10 text-gray-600 font-medium">
+        <a
+          href="#home"
+          class="hover:text-blue-700"
+          @click="handleScroll($event, '#home')"
+        >Home</a>
+        <a
+          href="#about"
+          class="hover:text-blue-700"
+          @click="handleScroll($event, '#about')"
+        >About Us</a>
+        <a
+          href="#services"
+          class="hover:text-blue-700"
+          @click="handleScroll($event, '#services')"
+        >Services</a>
+        <a
+          href="#contact"
+          class="hover:text-blue-700"
+          @click="handleScroll($event, '#contact')"
+        >Contact</a>
+      </nav>
+
+      <!-- MOBILE BUTTON -->
+      <button
+        class="lg:hidden text-blue-700 focus:outline-none"
+        @click="isOpen = !isOpen"
+      >
+        <span
+          v-if="!isOpen"
+          class="text-3xl"
+        >☰</span>
+        <span
+          v-else
+          class="text-3xl"
+        >✕</span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <transition name="fade">
+      <div
+        v-if="isOpen"
+        class="lg:hidden bg-white/95 border-t border-gray-200 shadow-lg aos-ignore"
+      >
+        <nav class="flex flex-col space-y-4 px-6 py-4 text-gray-700 font-medium">
+          <a
+            href="#home"
+            class="hover:text-blue-700"
+            @click="handleScroll($event, '#home')"
+          >Home</a>
+          <a
+            href="#about"
+            class="hover:text-blue-700"
+            @click="handleScroll($event, '#about')"
+          >About Us</a>
+          <a
+            href="#services"
+            class="hover:text-blue-700"
+            @click="handleScroll($event, '#services')"
+          >Services</a>
+          <a
+            href="#contact"
+            class="hover:text-blue-700"
+            @click="handleScroll($event, '#contact')"
+          >Contact</a>
+        </nav>
+      </div>
+    </transition>
+  </header>
+</template>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* BIAR NAVBAR TIDAK PERNAH DITOUCH AOS */
+.aos-ignore,
+.aos-ignore * {
+  opacity: 1 !important;
+  transform: none !important;
+}
+</style>
