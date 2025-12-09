@@ -1,15 +1,77 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
+const activeSection = ref('home')
 
+/* ============================
+   SECTION CLUSTERING
+   ============================ */
+const sectionMap = {
+  home: ['home'],
+  about: ['about', 'vision', 'mission', 'journey'],
+  services: ['services', 'why'],
+  contact: ['contact']
+}
+
+const resolveCluster = (id) => {
+  for (const cluster in sectionMap) {
+    if (sectionMap[cluster].includes(id)) return cluster
+  }
+  return 'home'
+}
+
+/* ============================
+   SMOOTH SCROLL + CLOSE MOBILE MENU
+   ============================ */
 const handleScroll = (e, target) => {
   e.preventDefault()
   isOpen.value = false
+
   document.querySelector(target)?.scrollIntoView({
     behavior: 'smooth'
   })
 }
+
+/* ============================
+   INTERSECTION OBSERVER LOGIC
+   ============================ */
+const observeSections = () => {
+  // Ambil semua section yang punya ID
+  const sections = document.querySelectorAll('section[id], footer[id]')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id
+          activeSection.value = resolveCluster(id)
+        }
+      })
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -45% 0px' // Biar Contact langsung terdeteksi
+    }
+  )
+
+  sections.forEach(sec => observer.observe(sec))
+
+  return observer
+}
+
+let observerInstance = null
+
+/* ============================
+   MOUNT & CLEANUP
+   ============================ */
+onMounted(() => {
+  observerInstance = observeSections()
+})
+
+onUnmounted(() => {
+  observerInstance?.disconnect()
+})
 </script>
 
 <template>
@@ -26,24 +88,71 @@ const handleScroll = (e, target) => {
       <nav class="hidden md:flex space-x-10 text-gray-600 font-medium">
         <a
           href="#home"
-          class="hover:text-blue-700"
+          :class="[
+            'relative pb-1 transition text-lg',
+            activeSection === 'home' ? 'text-blue-700 font-semibold' : 'hover:text-blue-700'
+          ]"
           @click="handleScroll($event, '#home')"
-        >Home</a>
+        >
+          Home
+          <span
+            :class="[
+              'absolute left-0 bottom-0 h-[2px] bg-blue-700 transition-all duration-300',
+              activeSection === 'home' ? 'w-full' : 'w-0'
+            ]"
+          />
+        </a>
+
         <a
           href="#about"
-          class="hover:text-blue-700"
+          :class="[
+            'relative pb-1 transition text-lg',
+            activeSection === 'about' ? 'text-blue-700 font-semibold' : 'hover:text-blue-700'
+          ]"
           @click="handleScroll($event, '#about')"
-        >About Us</a>
+        >
+          About Us
+          <span
+            :class="[
+              'absolute left-0 bottom-0 h-[2px] bg-blue-700 transition-all duration-300',
+              activeSection === 'about' ? 'w-full' : 'w-0'
+            ]"
+          />
+        </a>
+
         <a
           href="#services"
-          class="hover:text-blue-700"
+          :class="[
+            'relative pb-1 transition text-lg',
+            activeSection === 'services' ? 'text-blue-700 font-semibold' : 'hover:text-blue-700'
+          ]"
           @click="handleScroll($event, '#services')"
-        >Services</a>
+        >
+          Services
+          <span
+            :class="[
+              'absolute left-0 bottom-0 h-[2px] bg-blue-700 transition-all duration-300',
+              activeSection === 'services' ? 'w-full' : 'w-0'
+            ]"
+          />
+        </a>
+
         <a
           href="#contact"
-          class="hover:text-blue-700"
+          :class="[
+            'relative pb-1 transition text-lg',
+            activeSection === 'contact' ? 'text-blue-700 font-semibold' : 'hover:text-blue-700'
+          ]"
           @click="handleScroll($event, '#contact')"
-        >Contact</a>
+        >
+          Contact
+          <span
+            :class="[
+              'absolute left-0 bottom-0 h-[2px] bg-blue-700 transition-all duration-300',
+              activeSection === 'contact' ? 'w-full' : 'w-0'
+            ]"
+          />
+        </a>
       </nav>
 
       <!-- MOBILE BUTTON -->
@@ -71,22 +180,18 @@ const handleScroll = (e, target) => {
         <nav class="flex flex-col space-y-4 px-6 py-4 text-gray-700 font-medium">
           <a
             href="#home"
-            class="hover:text-blue-700"
             @click="handleScroll($event, '#home')"
           >Home</a>
           <a
             href="#about"
-            class="hover:text-blue-700"
             @click="handleScroll($event, '#about')"
           >About Us</a>
           <a
             href="#services"
-            class="hover:text-blue-700"
             @click="handleScroll($event, '#services')"
           >Services</a>
           <a
             href="#contact"
-            class="hover:text-blue-700"
             @click="handleScroll($event, '#contact')"
           >Contact</a>
         </nav>

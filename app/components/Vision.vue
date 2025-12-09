@@ -4,20 +4,35 @@
     class="py-24 bg-[#F7F9FF]"
   >
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-blue-700 text-center mb-14">
-        Our Vision & Mission
-      </h2>
+      <!-- TITLE -->
+      <div data-aos="fade-up">
+        <h2 class="text-4xl font-bold text-blue-700 text-center">
+          Our Vision & Mission
+        </h2>
+      </div>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- VISION -->
+      <!-- GRID -->
+      <div class="grid md:grid-cols-2 gap-12 mt-16">
+        <!-- VISION CARD -->
         <div
           data-aos="fade-up"
-          class="bg-white p-10 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden"
+          class="bg-white p-10 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.06)]
+                 hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]
+                 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
         >
+          <!-- BLUE TOP BAR -->
           <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-blue-300" />
-          <h3 class="text-2xl font-semibold text-blue-600 mb-4">
-            Our Vision
-          </h3>
+
+          <!-- TITLE + ICON -->
+          <div class="flex items-center gap-3 mb-5">
+            <UIcon
+              name="ph:eye-duotone"
+              class="w-7 h-7 text-blue-600"
+            />
+            <h3 class="text-2xl font-semibold text-blue-600">
+              Our Vision
+            </h3>
+          </div>
 
           <p class="text-gray-600 leading-relaxed text-lg">
             To become a distinguished leader in cross-border trading and strategic business advisory—
@@ -28,16 +43,27 @@
           </p>
         </div>
 
-        <!-- MISSION -->
+        <!-- MISSION CARD -->
         <div
           data-aos="fade-up"
           data-aos-delay="200"
-          class="bg-white p-10 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_25px_50px_rgba(0,0,0,0.08)] transition-all duration-300 relative overflow-hidden"
+          class="bg-white p-10 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.06)]
+                 hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]
+                 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
         >
+          <!-- BLUE TOP BAR -->
           <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-blue-300" />
-          <h3 class="text-2xl font-semibold text-blue-600 mb-4">
-            Our Mission
-          </h3>
+
+          <!-- TITLE + ICON -->
+          <div class="flex items-center gap-3 mb-5">
+            <UIcon
+              name="ph:flag-banner-duotone"
+              class="w-7 h-7 text-blue-600"
+            />
+            <h3 class="text-2xl font-semibold text-blue-600">
+              Our Mission
+            </h3>
+          </div>
 
           <ul class="text-gray-600 text-lg space-y-3 leading-relaxed">
             <li>• Deliver High-Value Trading Solutions</li>

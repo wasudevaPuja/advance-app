@@ -11,102 +11,68 @@
         Why Choose Us
       </h2>
 
-      <div class="grid md:grid-cols-3 gap-12 text-gray-700">
-        <!-- 1 -->
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- CARD TEMPLATE -->
         <div
+          v-for="(item, i) in items"
+          :key="i"
+          class="p-6 rounded-2xl border border-gray-200 shadow-sm bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
           data-aos="fade-up"
-          class="space-y-3"
+          :data-aos-delay="i * 120"
         >
-          <UIcon
-            name="ph:globe-duotone"
-            class="w-10 h-10 text-blue-600"
-          />
-          <h3 class="text-lg font-semibold text-blue-600">
-            International Expertise & Local Market Strength
-          </h3>
-          <p>Strong global network combined with deep local insight.</p>
-        </div>
+          <div class="flex flex-col space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
+              <UIcon
+                :name="item.icon"
+                class="w-6 h-6 text-blue-600"
+              />
+            </div>
 
-        <!-- 2 -->
-        <div
-          data-aos="fade-up"
-          data-aos-delay="100"
-          class="space-y-3"
-        >
-          <UIcon
-            name="mdi:shield-check"
-            class="w-10 h-10 text-blue-600"
-          />
-          <h3 class="text-lg font-semibold text-blue-600">
-            Fully Licensed & Legally Compliant
-          </h3>
-          <p>Trusted legal foundation for safe and reliable operations.</p>
-        </div>
+            <h3 class="text-lg font-semibold text-blue-700">
+              {{ item.title }}
+            </h3>
 
-        <!-- 3 -->
-        <div
-          data-aos="fade-up"
-          data-aos-delay="150"
-          class="space-y-3"
-        >
-          <UIcon
-            name="mdi:target"
-            class="w-10 h-10 text-blue-600"
-          />
-          <h3 class="text-lg font-semibold text-blue-600">
-            Tailored Strategies for Real Impact
-          </h3>
-          <p>Solutions crafted specifically for measurable business outcomes.</p>
-        </div>
-
-        <!-- 4 -->
-        <div
-          data-aos="fade-up"
-          data-aos-delay="200"
-          class="space-y-3"
-        >
-          <UIcon
-            name="mdi:handshake-outline"
-            class="w-10 h-10 text-blue-600"
-          />
-          <h3 class="text-lg font-semibold text-blue-600">
-            Dual Expertise in Trading & Consulting
-          </h3>
-          <p>Strategic advisory backed with executional trading capability.</p>
-        </div>
-
-        <!-- 5 -->
-        <div
-          data-aos="fade-up"
-          data-aos-delay="250"
-          class="space-y-3"
-        >
-          <UIcon
-            name="mdi:shield-account-outline"
-            class="w-10 h-10 text-blue-600"
-          />
-          <h3 class="text-lg font-semibold text-blue-600">
-            Integrity & Transparency
-          </h3>
-          <p>Ethical, open, and responsible business practice at every step.</p>
-        </div>
-
-        <!-- 6 -->
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          class="space-y-3"
-        >
-          <UIcon
-            name="mdi:star-check-outline"
-            class="w-10 h-10 text-blue-600"
-          />
-          <h3 class="text-lg font-semibold text-blue-600">
-            Consistent, Reliable, & Excellent Delivery
-          </h3>
-          <p>High-performance service backed by professional commitment.</p>
+            <p class="text-gray-600 leading-relaxed">
+              {{ item.desc }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+const items = [
+  {
+    icon: 'ph:globe-duotone',
+    title: 'International Expertise & Local Market Strength',
+    desc: 'Strong global network combined with deep local insight.'
+  },
+  {
+    icon: 'mdi:shield-check',
+    title: 'Fully Licensed & Legally Compliant',
+    desc: 'Trusted legal foundation for safe and reliable operations.'
+  },
+  {
+    icon: 'mdi:target',
+    title: 'Tailored Strategies for Real Impact',
+    desc: 'Solutions crafted specifically for measurable business outcomes.'
+  },
+  {
+    icon: 'mdi:handshake-outline',
+    title: 'Dual Expertise in Trading & Consulting',
+    desc: 'Strategic advisory backed with executional trading capability.'
+  },
+  {
+    icon: 'mdi:shield-account-outline',
+    title: 'Integrity & Transparency',
+    desc: 'Ethical, open, and responsible business practice at every step.'
+  },
+  {
+    icon: 'mdi:star-check-outline',
+    title: 'Consistent, Reliable, & Excellent Delivery',
+    desc: 'High-performance service backed by professional commitment.'
+  }
+]
+</script>

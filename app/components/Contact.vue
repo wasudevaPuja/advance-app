@@ -1,29 +1,25 @@
 <template>
   <footer
     id="contact"
-    class="bg-white pt-20 pb-10 border-t"
+    class="bg-white pt-20 pb-10 border-t shadow-sm"
   >
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-12 pb-16">
-        <div class="space-y-4">
-          <!-- LOGO SECTION (SMALL SIZE) -->
-          <div class="flex flex-col items-start space-y-3">
-            <!-- SMALLER LOGO -->
-            <img
-              src="/assets//img/logo.jpeg"
-              alt="Company Logo"
-              class="w-32 h-auto opacity-90 mx-auto"
-            >
-
-            <!-- Company tagline -->
-            <p class="text-gray-500 text-sm mx-auto">
-              Global Trading & Strategic Advisory
-            </p>
-          </div>
+        <!-- Logo + Tagline -->
+        <div class="space-y-4 flex flex-col items-center md:items-start">
+          <img
+            src="/assets/img/logo.jpeg"
+            alt="Company Logo"
+            class="w-36 opacity-90"
+          >
+          <p class="text-gray-500 text-sm text-center md:text-left">
+            Global Trading & Strategic Advisory
+          </p>
         </div>
 
+        <!-- Menu -->
         <div>
-          <h4 class="font-semibold text-gray-400 mb-4">
+          <h4 class="font-semibold text-gray-500 mb-4">
             Menu
           </h4>
           <ul class="space-y-2 text-gray-600">
@@ -45,7 +41,6 @@
                 class="hover:text-blue-700"
               >Services</a>
             </li>
-
             <li>
               <a
                 href="#contact"
@@ -55,13 +50,13 @@
           </ul>
         </div>
 
+        <!-- Company Info -->
         <div>
-          <h4 class="font-semibold text-gray-400 mb-4">
+          <h4 class="font-semibold text-gray-500 mb-4">
             Company Info
           </h4>
-
-          <ul class="space-y-2 text-gray-700 leading-relaxed">
-            <li>
+          <ul class="space-y-3 text-gray-700 leading-relaxed">
+            <li class="font-medium">
               PT ADVANCE TRADING TECHNOLOGY
             </li>
 
@@ -77,24 +72,27 @@
               <a
                 href="mailto:office.advancetrading.tech@gmail.com"
                 class="text-blue-600 hover:underline"
-              >
-                office.advancetrading.tech@gmail.com
-              </a>
+              >office.advancetrading.tech@gmail.com</a>
             </li>
 
             <li>
-              <strong>Phone:</strong> <br>+62 821 3613 126
+              <strong>Phone:</strong><br>
+              +62 821 3613 126
             </li>
           </ul>
         </div>
+
+        <!-- Contact Card -->
         <div>
-          <h4 class="font-semibold text-gray-400 mb-4">
+          <h4 class="font-semibold text-gray-500 mb-2">
             Contact Us
           </h4>
+
           <p class="text-gray-500 text-sm mb-4">
             Reach us instantly via WhatsApp.
           </p>
 
+          <!-- WhatsApp Button -->
           <a
             href="https://wa.me/628213613126?text=Hello%20Advance%20Trading%20Technology,%20I%20would%20like%20to%20ask%20about%20your%20services."
             target="_blank"
@@ -106,6 +104,49 @@
             />
             <span class="font-medium">WhatsApp Us</span>
           </a>
+
+          <!-- Social Icons -->
+          <div class="flex items-center gap-4 mt-6">
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-pink-500 hover:text-white transition"
+            >
+              <UIcon
+                name="mdi:instagram"
+                class="w-6 h-6"
+              />
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
+            >
+              <UIcon
+                name="mdi:facebook"
+                class="w-6 h-6"
+              />
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-red-600 hover:text-white transition"
+            >
+              <UIcon
+                name="mdi:youtube"
+                class="w-6 h-6"
+              />
+            </a>
+
+            <a
+              href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-sky-500 hover:text-white transition"
+            >
+              <UIcon
+                name="mdi:telegram"
+                class="w-6 h-6"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
