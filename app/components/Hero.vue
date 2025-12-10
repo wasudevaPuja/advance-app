@@ -4,7 +4,6 @@
     class="pt-40 pb-36 bg-gradient-to-b from-[#F7FAFF] via-[#F3F6FF] to-[#ECF2FF]"
   >
     <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-      <!-- LEFT: TEXT SIDE -->
       <div
         data-aos="fade-right"
         class="space-y-8"
@@ -20,7 +19,6 @@
           across global markets.
         </p>
 
-        <!-- BUTTON -->
         <div class="pt-4">
           <button
             class="px-10 py-4 rounded-full bg-blue-700 text-white text-lg font-semibold shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.20)] hover:bg-blue-800 transition-all duration-300 inline-flex items-center gap-2 active:scale-95"
@@ -35,15 +33,12 @@
         </div>
       </div>
 
-      <!-- RIGHT: IMAGE SIDE -->
       <div
         class="flex justify-center relative"
         data-aos="fade-left"
       >
-        <!-- Soft Glow Background -->
         <div class="absolute w-72 h-72 bg-blue-300 opacity-20 blur-[90px] rounded-full top-12 left-16" />
 
-        <!-- Illustration -->
         <img
           src="/img/finance-ill.svg"
           class="relative w-[440px] drop-shadow-xl animate-[float_7s_ease-in-out_infinite]"

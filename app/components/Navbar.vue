@@ -79,12 +79,10 @@ onUnmounted(() => {
     class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm"
   >
     <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-      <!-- LOGO -->
       <div class="text-2xl font-bold text-blue-700">
         ADVANCE TRADING
       </div>
 
-      <!-- DESKTOP MENU -->
       <nav class="hidden md:flex space-x-10 text-gray-600 font-medium">
         <a
           href="#home"
@@ -155,7 +153,6 @@ onUnmounted(() => {
         </a>
       </nav>
 
-      <!-- MOBILE BUTTON -->
       <button
         class="lg:hidden text-blue-700 focus:outline-none"
         @click="isOpen = !isOpen"
@@ -171,7 +168,6 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <!-- MOBILE MENU -->
     <transition name="fade">
       <div
         v-if="isOpen"

@@ -4,26 +4,21 @@
     class="py-24 bg-[#F7F9FF]"
   >
     <div class="container mx-auto px-6">
-      <!-- TITLE -->
       <div data-aos="fade-up">
         <h2 class="text-4xl font-bold text-blue-700 text-center">
           Our Vision & Mission
         </h2>
       </div>
 
-      <!-- GRID -->
       <div class="grid md:grid-cols-2 gap-12 mt-16">
-        <!-- VISION CARD -->
         <div
           data-aos="fade-up"
           class="bg-white p-10 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.06)]
                  hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]
                  hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
         >
-          <!-- BLUE TOP BAR -->
           <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-blue-300" />
 
-          <!-- TITLE + ICON -->
           <div class="flex items-center gap-3 mb-5">
             <UIcon
               name="ph:eye-duotone"
@@ -43,7 +38,6 @@
           </p>
         </div>
 
-        <!-- MISSION CARD -->
         <div
           data-aos="fade-up"
           data-aos-delay="200"
@@ -51,10 +45,8 @@
                  hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)]
                  hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
         >
-          <!-- BLUE TOP BAR -->
           <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-blue-300" />
 
-          <!-- TITLE + ICON -->
           <div class="flex items-center gap-3 mb-5">
             <UIcon
               name="ph:flag-banner-duotone"

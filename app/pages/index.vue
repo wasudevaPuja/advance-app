@@ -1,3 +1,4 @@
+<!-- inget tambahin og:title dan semuanya -->
 <script lang="ts" setup>
 useSeoMeta({
   title: 'Advance Trading | Where Global Trading Meets Strategic Excellence.',

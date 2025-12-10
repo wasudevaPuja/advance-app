@@ -5,7 +5,6 @@
   >
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-12 pb-16">
-        <!-- Logo + Tagline -->
         <div class="space-y-4 flex flex-col items-center md:items-start">
           <img
             src="/img/logo.jpeg"
@@ -17,7 +16,6 @@
           </p>
         </div>
 
-        <!-- Menu -->
         <div>
           <h4 class="font-semibold text-gray-500 mb-4">
             Menu
@@ -50,7 +48,6 @@
           </ul>
         </div>
 
-        <!-- Company Info -->
         <div>
           <h4 class="font-semibold text-gray-500 mb-4">
             Company Info
@@ -82,7 +79,6 @@
           </ul>
         </div>
 
-        <!-- Contact Card -->
         <div>
           <h4 class="font-semibold text-gray-500 mb-2">
             Contact Us
@@ -92,7 +88,6 @@
             Reach us instantly via WhatsApp.
           </p>
 
-          <!-- WhatsApp Button -->
           <a
             href="https://wa.me/628213613126?text=Hello%20Advance%20Trading%20Technology,%20I%20would%20like%20to%20ask%20about%20your%20services."
             target="_blank"
@@ -105,7 +100,6 @@
             <span class="font-medium">WhatsApp Us</span>
           </a>
 
-          <!-- Social Icons -->
           <div class="flex items-center gap-4 mt-6">
             <a
               href="#"

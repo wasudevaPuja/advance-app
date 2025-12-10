@@ -12,7 +12,6 @@
       </h2>
 
       <div class="grid md:grid-cols-3 gap-10">
-        <!-- CARD TEMPLATE -->
         <div
           v-for="(item, i) in items"
           :key="i"

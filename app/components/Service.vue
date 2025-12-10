@@ -14,7 +14,6 @@
       </div>
 
       <div class="grid md:grid-cols-2 gap-12">
-        <!-- WHOLESALE TRADING -->
         <div
           class="bg-white p-10 rounded-3xl
          shadow-[0_20px_40px_rgba(0,0,0,0.06)]
@@ -56,7 +55,6 @@
           </ul>
         </div>
 
-        <!-- MANAGEMENT CONSULTING -->
         <div
           class="bg-white p-10 rounded-3xl
          shadow-[0_20px_40px_rgba(0,0,0,0.06)]

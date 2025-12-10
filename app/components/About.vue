@@ -4,7 +4,6 @@
     class="py-24 bg-white"
   >
     <div class="container mx-auto px-6 max-w-6xl">
-      <!-- HEADER -->
       <div
         class="text-center mb-20"
         data-aos="fade-up"
@@ -17,9 +16,7 @@
         </p>
       </div>
 
-      <!-- TOP SECTION -->
       <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
-        <!-- TEXT -->
         <div data-aos="fade-right">
           <h3 class="text-3xl font-semibold text-gray-800 mb-6">
             Who We Are
@@ -36,7 +33,6 @@
           </p>
         </div>
 
-        <!-- Illustration -->
         <div
           class="flex justify-center"
           data-aos="fade-left"
@@ -54,9 +50,7 @@
         </div>
       </div>
 
-      <!-- KEY STRENGTH CARDS -->
       <div class="grid md:grid-cols-3 gap-10 mb-24">
-        <!-- CARD 1 -->
         <div
           class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100
                  hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
@@ -74,7 +68,6 @@
           </p>
         </div>
 
-        <!-- CARD 2 -->
         <div
           class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100
                  hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
@@ -93,7 +86,6 @@
           </p>
         </div>
 
-        <!-- CARD 3 -->
         <div
           class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100
                  hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
