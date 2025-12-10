@@ -31,7 +31,7 @@
             </li>
             <li>
               <a
-                href="#home"
+                href="#about"
                 class="hover:text-blue-700"
               >About Us</a>
             </li>
