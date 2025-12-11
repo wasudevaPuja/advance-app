@@ -78,7 +78,7 @@ const submitForm = async () => {
       />
 
       <p
-        class="text-center text-sm uppercase tracking-[0.25em] text-blue-500/70 font-semibold mb-3"
+        class="text-center text-sm uppercase tracking-[0.25em] text-blue-700 font-semibold mb-3"
         data-aos="fade-up"
       >
         Get In Touch
@@ -86,7 +86,7 @@ const submitForm = async () => {
 
       <!-- Heading -->
       <h2
-        class="text-4xl font-semibold text-center text-gray-900 mb-6"
+        class="text-4xl font-semibold text-center mb-6 text-blue-700"
         data-aos="fade-up"
         data-aos-delay="50"
       >
