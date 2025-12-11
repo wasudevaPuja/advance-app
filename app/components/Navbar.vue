@@ -154,7 +154,7 @@ onUnmounted(() => {
       </nav>
 
       <button
-        class="lg:hidden text-blue-700 focus:outline-none"
+        class="lg:hidden text-blue-700 focus:outline-none cursor-pointer"
         @click="isOpen = !isOpen"
       >
         <span

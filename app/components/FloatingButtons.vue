@@ -12,7 +12,7 @@
     </a>
 
     <button
-      class="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-xl hover:bg-blue-700 transition"
+      class="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-xl hover:bg-blue-700 transition cursor-pointer"
       aria-label="Scroll to Top"
       @click="scrollToTop"
     >

@@ -21,7 +21,7 @@
 
         <div class="pt-4">
           <button
-            class="px-10 py-4 rounded-full bg-blue-700 text-white text-lg font-semibold shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.20)] hover:bg-blue-800 transition-all duration-300 inline-flex items-center gap-2 active:scale-95"
+            class="px-10 py-4 rounded-full bg-blue-700 text-white text-lg font-semibold shadow-[0_8px_24px_rgba(0,0,0,0.15)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.20)] hover:bg-blue-800 transition-all duration-300 inline-flex items-center gap-2 active:scale-95 cursor-pointer"
             @click="scrollTo('#about')"
           >
             Get Started
