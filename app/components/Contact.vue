@@ -1,148 +1,172 @@
+<script setup>
+import { ref } from 'vue'
+import Swal from 'sweetalert2'
+
+const loading = ref(false)
+const contactForm = ref(null)
+
+const form = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const submitForm = async () => {
+  loading.value = true
+
+  const formData = new FormData(contactForm.value)
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    }).then(res => res.json())
+
+    loading.value = false
+
+    if (response.success) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Thank you for contacting us. We will reply shortly.',
+        confirmButtonColor: '#3B82F6'
+      })
+
+      contactForm.value.reset()
+      form.value = { name: '', email: '', message: '' }
+
+      // scroll balik ke contact
+      document.getElementById('contact')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    } else {
+      throw new Error()
+    }
+  } catch {
+    loading.value = false
+
+    Swal.fire({
+      icon: 'error',
+      title: 'Error!',
+      text: 'Failed to send your message. Please try again.',
+      confirmButtonColor: '#EF4444'
+    })
+  }
+}
+</script>
+
 <template>
-  <footer
+  <section
     id="contact"
-    class="bg-white pt-20 pb-10 border-t shadow-sm"
+    class="py-24 bg-[#F5F7FF] relative overflow-hidden"
   >
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-12 pb-16">
-        <div class="space-y-4 flex flex-col items-center md:items-start">
-          <img
-            src="/img/logo.jpeg"
-            alt="Company Logo"
-            class="w-36 opacity-90"
-          >
-          <p class="text-gray-500 text-sm text-center md:text-left">
-            Global Trading & Strategic Advisory
-          </p>
-        </div>
+    <!-- Background Gradient Accent -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-blue-50/40 to-transparent pointer-events-none"
+    />
 
-        <div>
-          <h4 class="font-semibold text-gray-500 mb-4">
-            Menu
-          </h4>
-          <ul class="space-y-2 text-gray-600">
-            <li>
-              <a
-                href="#home"
-                class="hover:text-blue-700"
-              >Home</a>
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="hover:text-blue-700"
-              >About Us</a>
-            </li>
-            <li>
-              <a
-                href="#services"
-                class="hover:text-blue-700"
-              >Services</a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="hover:text-blue-700"
-              >Contact</a>
-            </li>
-          </ul>
-        </div>
+    <div
+      class="max-w-4xl mx-auto bg-white rounded-3xl shadow-[0_8px_40px_rgba(0,0,0,0.06)]
+             p-10 md:p-14 relative z-10 border border-gray-100"
+      data-aos="fade-up"
+      data-aos-duration="900"
+    >
+      <div
+        class="absolute top-0 left-0 w-full h-[10px] rounded-t-[2rem]
+                  bg-gradient-to-r from-[#2563EB] to-[#60A5FA]"
+      />
 
-        <div>
-          <h4 class="font-semibold text-gray-500 mb-4">
-            Company Info
-          </h4>
-          <ul class="space-y-3 text-gray-700 leading-relaxed">
-            <li class="font-medium">
-              PT ADVANCE TRADING TECHNOLOGY
-            </li>
+      <p
+        class="text-center text-sm uppercase tracking-[0.25em] text-blue-500/70 font-semibold mb-3"
+        data-aos="fade-up"
+      >
+        Get In Touch
+      </p>
 
-            <li>
-              <strong>Alamat:</strong><br>
-              Jalan Raya Bedulu, Kelurahan Bedulu,<br>
-              Kecamatan Blahbatuh, Kabupaten Gianyar,<br>
-              Bali 80581
-            </li>
+      <!-- Heading -->
+      <h2
+        class="text-4xl font-semibold text-center text-gray-900 mb-6"
+        data-aos="fade-up"
+        data-aos-delay="50"
+      >
+        Contact Us
+      </h2>
 
-            <li>
-              <strong>Email:</strong>
-              <a
-                href="mailto:office.advancetrading.tech@gmail.com"
-                class="text-blue-600 hover:underline"
-              >office.advancetrading.tech@gmail.com</a>
-            </li>
+      <!-- Subtext -->
+      <p
+        class="text-center text-gray-500 max-w-2xl mx-auto mb-12 text-lg"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Have questions or want to discuss opportunities?
+        Our team is ready to assist you with clarity and professionalism.
+      </p>
 
-            <li>
-              <strong>Phone:</strong><br>
-              +62 821 3613 126
-            </li>
-          </ul>
-        </div>
+      <!-- Divider -->
+      <div class="w-24 h-[3px] bg-blue-500/40 mx-auto rounded mb-12" />
 
-        <div>
-          <h4 class="font-semibold text-gray-500 mb-2">
-            Contact Us
-          </h4>
+      <!-- Form -->
+      <form
+        ref="contactForm"
+        class="space-y-6"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        @submit.prevent="submitForm"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="eee4ad2d-7153-4a81-9610-0d69b1294b0c"
+        >
 
-          <p class="text-gray-500 text-sm mb-4">
-            Reach us instantly via WhatsApp.
-          </p>
+        <!-- Name -->
+        <input
+          v-model="form.name"
+          name="name"
+          type="text"
+          placeholder="Your Name"
+          required
+          class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                 text-gray-800 placeholder-gray-400 shadow-sm
+                 focus:border-blue-500 focus:ring-[3px] focus:ring-blue-100 transition"
+        >
 
-          <a
-            href="https://wa.me/628213613126?text=Hello%20Advance%20Trading%20Technology,%20I%20would%20like%20to%20ask%20about%20your%20services."
-            target="_blank"
-            class="inline-flex items-center space-x-2 bg-green-600 text-white px-5 py-3 rounded-full hover:bg-green-700 transition shadow-md"
-          >
-            <UIcon
-              name="mdi:whatsapp"
-              class="w-5 h-5 text-white"
-            />
-            <span class="font-medium">WhatsApp Us</span>
-          </a>
+        <!-- Email -->
+        <input
+          v-model="form.email"
+          name="email"
+          type="email"
+          placeholder="Your Email"
+          required
+          class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                 text-gray-800 placeholder-gray-400 shadow-sm
+                 focus:border-blue-500 focus:ring-[3px] focus:ring-blue-100 transition"
+        >
 
-          <div class="flex items-center gap-4 mt-6">
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-pink-500 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:instagram"
-                class="w-6 h-6"
-              />
-            </a>
+        <!-- Message -->
+        <textarea
+          v-model="form.message"
+          name="message"
+          placeholder="Your Message"
+          required
+          class="w-full h-32 px-4 py-3 rounded-xl bg-gray-50 border border-gray-200
+                 text-gray-800 placeholder-gray-400 shadow-sm
+                 focus:border-blue-500 focus:ring-[3px] focus:ring-blue-100 transition"
+        />
 
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:facebook"
-                class="w-6 h-6"
-              />
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-red-600 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:youtube"
-                class="w-6 h-6"
-              />
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-sky-500 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:telegram"
-                class="w-6 h-6"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          :disabled="loading"
+          class="w-full py-3 rounded-xl text-white font-medium shadow-lg
+                 bg-gradient-to-r from-blue-600 to-blue-700
+                 hover:opacity-95 active:scale-[0.97]
+                 transition disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+        >
+          {{ loading ? 'Sending...' : 'Send Message' }}
+        </button>
+      </form>
     </div>
-  </footer>
+  </section>
 </template>
