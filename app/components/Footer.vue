@@ -73,7 +73,7 @@
             </li>
 
             <li class="text-justify leading-relaxed text-gray-700">
-              <strong>Alamat:</strong><br>
+              <strong>Address:</strong><br>
               Millennium Centennial Center, 38th Floor <br>
               Jl. Jenderal Sudirman Kav. 25,<br>
               Jakarta Selatan, DKI Jakarta 12920,<br>
