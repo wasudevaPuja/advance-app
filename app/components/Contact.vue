@@ -59,7 +59,7 @@ const submitForm = async () => {
 <template>
   <section
     id="contact"
-    class="py-24 bg-[#F5F7FF] relative overflow-hidden"
+    class="py-24 px-6 bg-white relative overflow-hidden"
   >
     <!-- Background Gradient Accent -->
     <div

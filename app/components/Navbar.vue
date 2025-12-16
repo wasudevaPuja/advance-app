@@ -11,7 +11,8 @@ const sectionMap = {
   home: ['home'],
   about: ['about', 'vision', 'mission', 'journey'],
   services: ['services', 'why'],
-  contact: ['contact']
+  contact: ['contact'],
+  partners: ['partners']
 }
 
 const resolveCluster = (id) => {
@@ -51,7 +52,7 @@ const observeSections = () => {
     },
     {
       threshold: 0.2,
-      rootMargin: '0px 0px -45% 0px' // Biar Contact langsung terdeteksi
+      rootMargin: '0px 0px -45% 0px'
     }
   )
 
@@ -136,6 +137,23 @@ onUnmounted(() => {
         </a>
 
         <a
+          href="#partners"
+          :class="[
+            'relative pb-1 transition text-lg',
+            activeSection === 'partners' ? 'text-blue-700 font-semibold' : 'hover:text-blue-700'
+          ]"
+          @click="handleScroll($event, '#partners')"
+        >
+          Our Partners
+          <span
+            :class="[
+              'absolute left-0 bottom-0 h-[2px] bg-blue-700 transition-all duration-300',
+              activeSection === 'partners' ? 'w-full' : 'w-0'
+            ]"
+          />
+        </a>
+
+        <a
           href="#contact"
           :class="[
             'relative pb-1 transition text-lg',
@@ -186,6 +204,10 @@ onUnmounted(() => {
             href="#services"
             @click="handleScroll($event, '#services')"
           >Services</a>
+          <a
+            href="#partners"
+            @click="handleScroll($event, '#partners')"
+          >Our Partners</a>
           <a
             href="#contact"
             @click="handleScroll($event, '#contact')"

@@ -13,6 +13,7 @@ useSeoMeta({
     <Vision />
     <Service />
     <Choose />
+    <Partners />
     <Contact />
   </div>
 </template>

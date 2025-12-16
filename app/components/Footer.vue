@@ -19,30 +19,46 @@
           <h4 class="font-semibold text-gray-500 mb-4">
             Menu
           </h4>
-          <ul class="space-y-2 text-gray-600">
+          <ul class="space-y-2 text-gray-700">
             <li>
-              <a
-                href="#home"
-                class="hover:text-blue-700"
-              >Home</a>
+              <button
+                class="hover:text-blue-700 transition cursor-pointer"
+                @click="scrollToSection('home')"
+              >
+                Home
+              </button>
             </li>
             <li>
-              <a
-                href="#about"
-                class="hover:text-blue-700"
-              >About Us</a>
+              <button
+                class="hover:text-blue-700 transition cursor-pointer"
+                @click="scrollToSection('about')"
+              >
+                About Us
+              </button>
             </li>
             <li>
-              <a
-                href="#services"
-                class="hover:text-blue-700"
-              >Services</a>
+              <button
+                class="hover:text-blue-700 transition cursor-pointer"
+                @click="scrollToSection('services')"
+              >
+                Services
+              </button>
             </li>
             <li>
-              <a
-                href="#contact"
-                class="hover:text-blue-700"
-              >Contact</a>
+              <button
+                class="hover:text-blue-700 transition cursor-pointer"
+                @click="scrollToSection('partners')"
+              >
+                Our Partners
+              </button>
+            </li>
+            <li>
+              <button
+                class="hover:text-blue-700 transition cursor-pointer"
+                @click="scrollToSection('contact')"
+              >
+                Contact
+              </button>
             </li>
           </ul>
         </div>
@@ -56,11 +72,17 @@
               PT ADVANCE TRADING TECHNOLOGY
             </li>
 
-            <li>
+            <li class="text-justify leading-relaxed text-gray-700">
               <strong>Alamat:</strong><br>
-              Jalan Raya Bedulu, Kelurahan Bedulu,<br>
-              Kecamatan Blahbatuh, Kabupaten Gianyar,<br>
-              Bali 80581
+              Millennium Centennial Center, 38th Floor <br>
+              Jl. Jenderal Sudirman Kav. 25,<br>
+              Jakarta Selatan, DKI Jakarta 12920,<br>
+              Indonesia
+            </li>
+
+            <li class="mt-3 text-justify leading-relaxed text-gray-700">
+              <strong>Office Hours:</strong><br>
+              Monday to Friday, 09.00 – 17.00 WIB
             </li>
 
             <li>
@@ -68,7 +90,7 @@
               <a
                 href="mailto:office.advancetrading.tech@gmail.com"
                 class="text-blue-600 hover:underline"
-              >office.advancetrading.tech@gmail.com</a>
+              ><br>office.advancetrading.tech@gmail.com</a>
             </li>
 
             <li>
@@ -144,8 +166,21 @@
       </div>
     </div>
   </div>
-
-  <footer class="py-3 bg-[#F6F9FF] text-center text-black">
-    <p>© 2025 PT Advance Trading Technology — All Rights Reserved</p>
-  </footer>
+  <div class="w-full h-[3px] bg-gradient-to-r from-blue-600 to-blue-300 mb-12 opacity-80">
+    <footer class="py-3 bg-[#F6F9FF] text-center text-black">
+      <p>© 2025 PT Advance Trading Technology — All Rights Reserved</p>
+    </footer>
+  </div>
 </template>
+
+<script setup>
+const scrollToSection = (id) => {
+  const section = document.getElementById(id)
+  if (!section) return
+
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  })
+}
+</script>
