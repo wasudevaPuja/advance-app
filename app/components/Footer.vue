@@ -1,13 +1,13 @@
 <template>
-  <div
-    class="bg-white pt-20 pb-10 border-t shadow-sm"
-  >
+  <footer class="bg-white border-t pt-20">
+    <!-- MAIN FOOTER -->
     <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-4 gap-12 pb-16">
-        <div class="space-y-4 flex flex-col items-center md:items-start">
+      <div class="grid gap-12 md:grid-cols-4 pb-16">
+        <!-- BRAND -->
+        <div class="flex flex-col items-center md:items-start space-y-4">
           <img
             src="/img/logo.jpeg"
-            alt="Company Logo"
+            alt="PT Advance Trading Technology"
             class="w-36 opacity-90"
           >
           <p class="text-gray-500 text-sm text-center md:text-left">
@@ -15,14 +15,15 @@
           </p>
         </div>
 
+        <!-- MENU -->
         <div>
-          <h4 class="font-semibold text-gray-500 mb-4">
+          <h4 class="text-gray-500 font-semibold mb-4">
             Menu
           </h4>
           <ul class="space-y-2 text-gray-700">
             <li>
               <button
-                class="hover:text-blue-700 transition cursor-pointer"
+                class="hover:text-blue-700 transition"
                 @click="scrollToSection('home')"
               >
                 Home
@@ -30,7 +31,7 @@
             </li>
             <li>
               <button
-                class="hover:text-blue-700 transition cursor-pointer"
+                class="hover:text-blue-700 transition"
                 @click="scrollToSection('about')"
               >
                 About Us
@@ -38,7 +39,7 @@
             </li>
             <li>
               <button
-                class="hover:text-blue-700 transition cursor-pointer"
+                class="hover:text-blue-700 transition"
                 @click="scrollToSection('services')"
               >
                 Services
@@ -46,7 +47,7 @@
             </li>
             <li>
               <button
-                class="hover:text-blue-700 transition cursor-pointer"
+                class="hover:text-blue-700 transition"
                 @click="scrollToSection('partners')"
               >
                 Our Partners
@@ -54,7 +55,7 @@
             </li>
             <li>
               <button
-                class="hover:text-blue-700 transition cursor-pointer"
+                class="hover:text-blue-700 transition"
                 @click="scrollToSection('contact')"
               >
                 Contact
@@ -63,60 +64,61 @@
           </ul>
         </div>
 
+        <!-- COMPANY INFO -->
         <div>
-          <h4 class="font-semibold text-gray-500 mb-4">
+          <h4 class="text-gray-500 font-semibold mb-4">
             Company Info
           </h4>
-          <ul class="space-y-3 text-gray-700 leading-relaxed">
-            <li class="font-medium">
-              PT ADVANCE TRADING TECHNOLOGY
-            </li>
 
-            <li class="leading-relaxed text-justify text-gray-700">
-              <strong>Address:</strong><br>
-              Millennium Centennial Center, 38th Floor <br>
-              Jl. Jenderal Sudirman Kav. 25,<br>
-              Jakarta Selatan, DKI Jakarta 12920,<br>
-              Indonesia
-            </li>
+          <p class="font-medium text-gray-800 mb-3">
+            PT ADVANCE TRADING TECHNOLOGY
+          </p>
 
-            <li class="mt-3 text-justify leading-relaxed text-gray-700">
-              <strong>Office Hours:</strong><br>
-              Monday to Friday, 09.00 – 17.00 WIB
-            </li>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Millennium Centennial Center, 38th Floor<br>
+            Jl. Jenderal Sudirman Kav. 25<br>
+            Jakarta Selatan, DKI Jakarta 12920<br>
+            Indonesia
+          </p>
 
-            <li>
-              <strong>Email:</strong>
-              <a
-                href="mailto:office.advancetrading.tech@gmail.com"
-                class="text-blue-600 hover:underline"
-              ><br>office.advancetrading.tech@gmail.com</a>
-            </li>
-
-            <li>
-              <strong>Phone:</strong><br>
-              +62 821 3613 126
-            </li>
-          </ul>
+          <p class="text-gray-700">
+            <strong>Office Hours:</strong><br>
+            Monday – Friday, 09.00 – 17.00 WIB
+          </p>
         </div>
 
-        <div class="text-center text-gray-600  leading-relaxed max-w-sm mx-auto">
-          Advance Trading Technology operates through
-          <span class="font-medium">direct business communication</span>.
-          Official updates and inquiries are handled via
-          <span class="font-semibold text-blue-600">email</span>
-          and
-          <span class="font-semibold text-blue-600">phone</span>
-          only.
+        <!-- CONTACT -->
+        <div>
+          <h4 class="text-gray-500 font-semibold mb-4">
+            Contact
+          </h4>
+
+          <p class="text-gray-700 mb-4">
+            <strong>Email:</strong><br>
+            <a
+              href="mailto:office.advancetrading.tech@gmail.com"
+              class="text-blue-600 hover:underline break-all"
+            >
+              office.advancetrading.tech@gmail.com
+            </a>
+          </p>
+
+          <p class="text-gray-700">
+            <strong>Phone:</strong><br>
+            +62 821 3613 126
+          </p>
         </div>
       </div>
     </div>
-  </div>
-  <div class="w-full h-[3px] bg-gradient-to-r from-blue-700 to-blue-300 mb-12 opacity-1000">
-    <footer class="py-3 bg-[#F6F9FF] text-center text-black">
-      <p>© 2025 PT Advance Trading Technology — All Rights Reserved</p>
-    </footer>
-  </div>
+
+    <!-- DIVIDER -->
+    <div class="w-full h-[3px] bg-[#F6F9FF]" />
+
+    <!-- COPYRIGHT -->
+    <div class="bg-[#F6F9FF] py-4 text-center text-black">
+      © 2025 PT Advance Trading Technology. All Rights Reserved.
+    </div>
+  </footer>
 </template>
 
 <script setup>
