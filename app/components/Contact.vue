@@ -61,7 +61,6 @@ const submitForm = async () => {
     id="contact"
     class="py-24 px-6 bg-white relative overflow-hidden"
   >
-    <!-- Background Gradient Accent -->
     <div
       class="absolute inset-0 bg-gradient-to-b from-blue-50/40 to-transparent pointer-events-none"
     />
@@ -84,7 +83,6 @@ const submitForm = async () => {
         Get In Touch
       </p>
 
-      <!-- Heading -->
       <h2
         class="text-4xl font-semibold text-center mb-6 text-blue-700"
         data-aos="fade-up"
@@ -93,7 +91,6 @@ const submitForm = async () => {
         Contact Us
       </h2>
 
-      <!-- Subtext -->
       <p
         class="text-center text-gray-500 max-w-2xl mx-auto mb-12 text-lg"
         data-aos="fade-up"
@@ -103,10 +100,8 @@ const submitForm = async () => {
         Our team is ready to assist you with clarity and professionalism.
       </p>
 
-      <!-- Divider -->
       <div class="w-24 h-[3px] bg-blue-500/40 mx-auto rounded mb-12" />
 
-      <!-- Form -->
       <form
         ref="contactForm"
         class="space-y-6"
@@ -120,7 +115,6 @@ const submitForm = async () => {
           value="eee4ad2d-7153-4a81-9610-0d69b1294b0c"
         >
 
-        <!-- Name -->
         <input
           v-model="form.name"
           name="name"
@@ -132,7 +126,6 @@ const submitForm = async () => {
                  focus:border-blue-500 focus:ring-[3px] focus:ring-blue-100 transition"
         >
 
-        <!-- Email -->
         <input
           v-model="form.email"
           name="email"
@@ -144,7 +137,6 @@ const submitForm = async () => {
                  focus:border-blue-500 focus:ring-[3px] focus:ring-blue-100 transition"
         >
 
-        <!-- Message -->
         <textarea
           v-model="form.message"
           name="message"
@@ -155,7 +147,6 @@ const submitForm = async () => {
                  focus:border-blue-500 focus:ring-[3px] focus:ring-blue-100 transition"
         />
 
-        <!-- Submit Button -->
         <button
           type="submit"
           :disabled="loading"

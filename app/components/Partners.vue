@@ -24,7 +24,6 @@
         class="hidden md:flex flex-col gap-10 items-center"
         data-aos="fade-left"
       >
-        <!-- ROW 1 -->
         <div class="partner-row">
           <img
             src="/img/omega.jpg"
@@ -55,7 +54,6 @@
           >
         </div>
 
-        <!-- ROW 3 -->
         <div class="partner-row">
           <img
             src="/img/nomaspect.png"
@@ -73,7 +71,6 @@
       </div>
     </div>
 
-    <!-- ================= MOBILE GRID ================= -->
     <div
       class="mt-14 grid grid-cols-2 gap-6 px-6 md:hidden"
       data-aos="fade-up"

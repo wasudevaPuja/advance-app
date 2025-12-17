@@ -1,11 +1,8 @@
 <template>
   <footer class="bg-white border-t pt-20">
-    <!-- MAIN FOOTER -->
     <div class="container mx-auto px-6">
       <div class="grid gap-12 md:grid-cols-4 pb-16">
-        <!-- BRAND -->
         <div class="flex flex-col items-center md:items-start space-y-4">
-          <!-- Logo wrapper -->
           <div class="w-full flex justify-center md:justify-start">
             <img
               src="/img/logo.jpeg"
@@ -19,7 +16,6 @@
           </p>
         </div>
 
-        <!-- MENU -->
         <div>
           <h4 class="text-gray-500 font-semibold mb-4">
             Menu
@@ -68,7 +64,6 @@
           </ul>
         </div>
 
-        <!-- COMPANY INFO -->
         <div>
           <h4 class="text-gray-500 font-semibold mb-4">
             Company Info
@@ -79,6 +74,7 @@
           </p>
 
           <p class="text-gray-700 leading-relaxed mb-4">
+            <strong>Address:</strong><br>
             Millennium Centennial Center, 38th Floor<br>
             Jl. Jenderal Sudirman Kav. 25<br>
             Jakarta Selatan, DKI Jakarta 12920<br>
@@ -91,7 +87,6 @@
           </p>
         </div>
 
-        <!-- CONTACT -->
         <div>
           <h4 class="text-gray-500 font-semibold mb-4">
             Contact
@@ -115,10 +110,8 @@
       </div>
     </div>
 
-    <!-- DIVIDER -->
     <div class="w-full h-[3px] bg-[#F6F9FF]" />
 
-    <!-- COPYRIGHT -->
     <div class="bg-[#F6F9FF] py-4 text-center text-black">
       © 2025 PT Advance Trading Technology. All Rights Reserved.
     </div>
