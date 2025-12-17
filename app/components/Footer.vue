@@ -72,7 +72,7 @@
               PT ADVANCE TRADING TECHNOLOGY
             </li>
 
-            <li class="text-justify leading-relaxed text-gray-700">
+            <li class="leading-relaxed text-justify text-gray-700">
               <strong>Address:</strong><br>
               Millennium Centennial Center, 38th Floor <br>
               Jl. Jenderal Sudirman Kav. 25,<br>
@@ -100,73 +100,19 @@
           </ul>
         </div>
 
-        <div>
-          <h4 class="font-semibold text-gray-500 mb-2">
-            Contact Us
-          </h4>
-
-          <p class="text-gray-500 text-sm mb-4">
-            Reach us instantly via WhatsApp.
-          </p>
-
-          <a
-            href="https://wa.me/628213613126?text=Hello%20Advance%20Trading%20Technology,%20I%20would%20like%20to%20ask%20about%20your%20services."
-            target="_blank"
-            class="inline-flex items-center space-x-2 bg-green-600 text-white px-5 py-3 rounded-full hover:bg-green-700 transition shadow-md"
-          >
-            <UIcon
-              name="mdi:whatsapp"
-              class="w-5 h-5 text-white"
-            />
-            <span class="font-medium">WhatsApp Us</span>
-          </a>
-
-          <div class="flex items-center gap-4 mt-6">
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-pink-500 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:instagram"
-                class="w-6 h-6"
-              />
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:facebook"
-                class="w-6 h-6"
-              />
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-red-600 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:youtube"
-                class="w-6 h-6"
-              />
-            </a>
-
-            <a
-              href="#"
-              class="w-10 h-10 rounded-full bg-gray-100 text-gray-700 flex items-center justify-center hover:bg-sky-500 hover:text-white transition"
-            >
-              <UIcon
-                name="mdi:telegram"
-                class="w-6 h-6"
-              />
-            </a>
-          </div>
+        <div class="text-center text-gray-600  leading-relaxed max-w-sm mx-auto">
+          Advance Trading Technology operates through
+          <span class="font-medium">direct business communication</span>.
+          Official updates and inquiries are handled via
+          <span class="font-semibold text-blue-600">email</span>
+          and
+          <span class="font-semibold text-blue-600">phone</span>
+          only.
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full h-[3px] bg-gradient-to-r from-blue-600 to-blue-300 mb-12 opacity-80">
+  <div class="w-full h-[3px] bg-gradient-to-r from-blue-700 to-blue-300 mb-12 opacity-1000">
     <footer class="py-3 bg-[#F6F9FF] text-center text-black">
       <p>© 2025 PT Advance Trading Technology — All Rights Reserved</p>
     </footer>

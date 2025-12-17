@@ -1,12 +1,11 @@
 <template>
   <section
     id="partners"
-    class="py-20 bg-white"
+    class="py-24 bg-white"
   >
     <div
       class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
     >
-      <!-- LEFT CONTENT -->
       <div
         data-aos="fade-right"
         class="text-center md:text-left"
@@ -21,8 +20,6 @@
         </p>
       </div>
 
-      <!-- ORBIT CONTAINER -->
-      <!-- DESKTOP + TABLET PARTNERS -->
       <div
         class="hidden md:flex flex-col gap-10 items-center"
         data-aos="fade-left"
@@ -30,7 +27,7 @@
         <!-- ROW 1 -->
         <div class="partner-row">
           <img
-            src="/img/tridatu.jpg"
+            src="/img/omega.jpg"
             class="partner-card lg"
           >
           <img
@@ -43,14 +40,13 @@
           >
         </div>
 
-        <!-- ROW 2 (MENJOROK KE DALAM) -->
         <div class="partner-row offset">
           <img
             src="/img/paradigm.png"
             class="partner-card md"
           >
           <img
-            src="/img/lmats.png"
+            src="/img/gufo.png"
             class="partner-card md"
           >
           <img
@@ -100,13 +96,13 @@
 
 <script setup>
 const logos = [
-  '/img/tridatu.jpg',
+  '/img/omega.jpg',
   '/img/paradigm.png',
   '/img/ava.jpg',
   '/img/nomaspect.png',
   '/img/ferron.png',
   '/img/sprawdzaj.svg',
-  '/img/lmats.png',
+  '/img/gufo.png',
   '/img/qingdao.jpeg',
   '/img/shannon.png'
 ]
@@ -117,7 +113,6 @@ const logos = [
 .partner-row {
   display: flex;
   gap: 32px;
-  justify-content: center;
 }
 
 /* row tengah agak masuk */
@@ -148,15 +143,15 @@ const logos = [
 }
 
 .partner-card.md {
-  width: 145px;
-  height: 92px;
-  padding: 14px;
+  width: 160px;
+  height: 100px;
+  padding: 16px;
 }
 
 .partner-card.sm {
-  width: 135px;
-  height: 85px;
-  padding: 12px;
+  width: 160px;
+  height: 100px;
+  padding: 16px;
 }
 
 /* ===== TABLET ADJUST ===== */
