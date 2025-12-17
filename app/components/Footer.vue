@@ -5,13 +5,17 @@
       <div class="grid gap-12 md:grid-cols-4 pb-16">
         <!-- BRAND -->
         <div class="flex flex-col items-center md:items-start space-y-4">
-          <img
-            src="/img/logo.jpeg"
-            alt="PT Advance Trading Technology"
-            class="w-36 opacity-90"
-          >
+          <!-- Logo wrapper -->
+          <div class="w-full flex justify-center md:justify-start">
+            <img
+              src="/img/logo.jpeg"
+              alt="PT Advance Trading Technology"
+              class="w-36 opacity-90 block mx-auto translate-x-[6px]"
+            >
+          </div>
+
           <p class="text-gray-500 text-sm text-center md:text-left">
-            Global Trading & Strategic Advisory
+            Where Global Trading Meets Strategic Excellence
           </p>
         </div>
 
