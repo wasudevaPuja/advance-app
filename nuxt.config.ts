@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://advancetrade.asia'
+    url: 'https://www.advancetrade.asia'
   },
 
   routeRules: {
