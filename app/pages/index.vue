@@ -8,8 +8,8 @@ useSeoMeta({
   ogDescription:
     'Trading and strategic advisory solutions to accelerate performance, strengthen growth, and create long-term value in global markets.',
   ogType: 'website',
-  ogUrl: 'https://advancetrade.asia',
-  ogImage: 'https://advancetrade.asia/img/logo.jpeg',
+  ogUrl: 'https://www.advancetrade.asia',
+  ogImage: 'https://www.advancetrade.asia/img/logo.jpeg',
   ogImageWidth: 1200,
   ogImageHeight: 630,
   ogSiteName: 'Advance Trading',
@@ -19,7 +19,7 @@ useSeoMeta({
   twitterTitle: 'Advance Trading',
   twitterDescription:
     'Where Global Trading Meets Strategic Excellence.',
-  twitterImage: 'https://advancetrade.asia/img/logo.jpeg'
+  twitterImage: 'https://www.advancetrade.asia/img/logo.jpeg'
 })
 </script>
 
